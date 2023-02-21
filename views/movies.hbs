@@ -1,7 +1,11 @@
-<div>
-    {{#each foundMovies}}
-    <img src={{this.image}} alt="movie-image">
-    <h3>{{this.title}}</h3>
-    <button><a href="/movies/{{id}}">See more</a></button>
-    {{/each}}
+<div class="container text-center" id='movie-list-page'>
+  {{#each foundMovies}}
+    <div class='card' style='width: 18rem;'>
+      <img class='card-img-top' src={{this.image}} alt='movie-image' />
+      <div class='card-body'>
+        <h5 class='card-title'>{{this.title}}</h5>
+        <a href='/movies/{{id}}' class='btn btn-primary'>See more</a>
+      </div>
+    </div>
+  {{/each}}
 </div>
